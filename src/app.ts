@@ -2,13 +2,16 @@ class App {
 
   public name: string;
 
-  constructor(name: string) {
-    console.log('App created.');
+  constructor(name: string = 'demo') {
     this.name = name;
   }
 
   public run() {
-    console.log('App started!');
+    this.method1();
+  }
+
+  public method1() {
+
   }
 }
 
