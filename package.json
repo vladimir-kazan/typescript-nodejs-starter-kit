@@ -7,25 +7,32 @@
   "license": "Apache-2.0",
   "scripts": {
     "start": "npm run ts-build && npm run node-serve",
-    "node-serve": "node dist/bootstrap.js",
-    "node-watch": "nodemon dist/bootstrap.js",
+    "node-serve": "node dist/index.js",
+    "node-watch": "nodemon dist/index.js",
     "ts-build": "tsc",
     "ts-watch": "tsc -w",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan,blue\" \"npm run ts-watch\" \"npm run node-watch\"",
     "test": "jest --forceExit --coverage --verbose --detectOpenHandles",
     "test-watch": "npm run test -- --watchAll",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
-    "debug-serve": "nodemon --inspect dist/bootstrap.js",
+    "debug-serve": "nodemon --inspect dist/index.js",
     "debug-watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan,blue\" \"npm run ts-watch\" \"npm run debug-serve\""
   },
   "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.16.0",
     "@types/jest": "^23.3.1",
-    "@types/node": "^10.9.4",
+    "@types/node": "^10.12.12",
     "concurrently": "^4.0.1",
     "jest": "^23.5.0",
     "nodemon": "^1.18.3",
     "ts-jest": "^23.1.4",
     "tslint": "^5.11.0",
     "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "tsoa": "^2.3.3"
   }
 }
