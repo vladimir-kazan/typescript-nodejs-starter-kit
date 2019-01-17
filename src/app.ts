@@ -11,7 +11,7 @@ class App {
   }
 
   public method1() {
-
+    console.log(1);
   }
 }
 
