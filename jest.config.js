@@ -12,7 +12,8 @@ module.exports = {
     '^.+\\.(ts|tsx)$': 'ts-jest'
   },
   testMatch: [
-    '**/test/**/*.test.(ts|js)'
+    '**/test/**/*.test.(ts|js)',
+    '**/src/**/*.test.(ts|js)',
   ],
   testEnvironment: 'node'
 };
